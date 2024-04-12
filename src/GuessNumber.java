@@ -1,10 +1,11 @@
 import javax.swing.JOptionPane;
 
 public class GuessNumber {
-    public static void main(String[] args) {
+    //removed static because have to instatiate (as per instructions)
+    public void RunGuesser() throws Exception{
         //get random number 1-100
         int number = (int) (Math.random() * 100) + 1;
-        
+
         while (true) {
             //get guess
             int guess = Integer.parseInt(JOptionPane.showInputDialog("guess a number 1-100"));
@@ -16,7 +17,7 @@ public class GuessNumber {
                 break;
             }
             //too low
-            else if (num < number) {
+            else if (guess < number) {
                 JOptionPane.showMessageDialog(null, "that's too low, try again...");
             }
             //too high

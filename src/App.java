@@ -9,8 +9,12 @@ public class App {
         int age = Integer.parseInt(JOptionPane.showInputDialog("how old are you? "));
         JOptionPane.showMessageDialog(null, "you look way older than "+age+" years old");
 
-        //this portion calls the other functions
-        TrueOrFalse();
-        GuessNumber();
+        //instantiating an instance of the class
+        TrueOrFalse trueOrFalse = new TrueOrFalse();
+        //run my method in instance of the class
+        trueOrFalse.RunTrueFalse();
+
+        GuessNumber guessNumber = new GuessNumber();
+        guessNumber.RunGuesser();
     }
 }
